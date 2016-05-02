@@ -17,6 +17,6 @@ angular.module('ds.products', [
 		'restangular',
     'ds.shared',
     'ds.cart',
+		'ds.inventory',
     'ui.bootstrap'
 ]);
-

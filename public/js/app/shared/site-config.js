@@ -98,6 +98,10 @@ angular.module('ds.shared')
 
                 indexing: {
                     baseUrl: 'https://' + apiPath + '/hybris/search-algolia/v1/' + tenantId
+                },
+
+                inventory: {
+                    baseUrl: 'https://' + apiPath + '/arvato/inventory/test/tenants/' + tenantId
                 }
             };
 
