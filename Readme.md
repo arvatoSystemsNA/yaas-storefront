@@ -6,16 +6,16 @@ serve as starting point for creating a customized store front.
 
 ## Installation
 
-The following steps will demonstrate how to install and run the code on localhost.  At the end, you will be able to browse and "shop" in 
+The following steps will demonstrate how to install and run the code on localhost.  At the end, you will be able to browse and "shop" in
 a pre-configured store.  Feel free to take items through checkout, using any Stripe test credit card number (https://stripe.com/docs/testing).
 
 ###  1. System requirements
 
 Install node and npm:
 
-	$ brew install node	# on MacOS
+	$ brew install node010	# on MacOS
 
-[Or download from the Node site](http://nodejs.org/)
+[Or download v0.10.x from the Node site](http://nodejs.org/)
 
 Install grunt:
 
@@ -32,8 +32,6 @@ Create a fork of the repository, clone it to your machine, and ensure you are on
 To locally install the project, execute:
 
     $ npm install
-    $ npm update 
-    $ bower install
 
 
 ### 3. Project startup
@@ -66,7 +64,7 @@ Follow the steps outlined in the [Dev Portal](https://devportal.yaas.io/gettings
 ### 2.  Replace the default project id in the code base with your own (see project adminstration settings in the Builder).
 In gruntfile.js, set the **PROJECT_ID** to your own project ID. When you build the project, the default project id in bootstrap.js will be replaced with your project-id. At this time you will need to also configure the **CLIENT_ID** and **REDIRECT_URI** gruntfile variables with the values set in the application associated with your project.
 
-### 3.  Launch a new session 
+### 3.  Launch a new session
 Execute command **"npm start"** and open your browser at http://localhost:9000.  You should now see your customized store.
 
 ### 4.  Customize the style or logic of your storefront as desired
@@ -87,7 +85,7 @@ The :prod parameter specifies which dynamic domain to connect with the api servi
 
 **npm start** is configured to run **grunt build:prod**. Other option is **:stage** and can be configured in the gruntfile.
 
-Credential parameters also exist for automated build environments. With NPM 2.0, it is possible to pass in a Client_Id, Project_Id and Redirect_URI from npm run-script command line. For example, we can further automate the build system with these parameters (pid, cid and ruri) like this: 
+Credential parameters also exist for automated build environments. With NPM 2.0, it is possible to pass in a Client_Id, Project_Id and Redirect_URI from npm run-script command line. For example, we can further automate the build system with these parameters (pid, cid and ruri) like this:
 
     $ npm run-script singleProd -- --pid=abc --cid=123 --ruri=http://example.com
 
@@ -120,7 +118,7 @@ The angular bootstrapping takes places in file public/js/bootstrap.js.
 From here, angular will load the "ds.app" module which comprises file public/js/app/app.js. It is here that the application
 is further configured before it is loaded.
 
-The app-config.js file provides dynamic configuration for the application which allows you to set application variables without persisting 
+The app-config.js file provides dynamic configuration for the application which allows you to set application variables without persisting
 them in your git repository. For example, if you are running with multiple project id's changing between these environments will cause git to indicate an update. This scenario is avoided in app-config as it is included in .gitignore. Another example of non-persisted dynamic configuration is in the URL path to the API. Should this need to change, you will not need to persist it in git.
 
 
@@ -128,7 +126,7 @@ them in your git repository. For example, if you are running with multiple proje
 
 The following application events are used to communicate state changes that affect the entire application overall.  Interested controllers can subscribe to these events.
 
-- **'cart:updated'** - fired when new cart information has been acquired from the service; 
+- **'cart:updated'** - fired when new cart information has been acquired from the service;
     - event object:
         - cart - current cart instance
         - source - source event of the update (manual | currency | language | merge | reset)
@@ -174,7 +172,7 @@ There are two distinct localization settings related to the store:  there are th
 
 This project contains the capability to run the same deployed store template against multiple configured storefronts. In order to do so, start the server by calling  "npm run-script multiProd".  This will start up the Express.JS server configured in file multi-tenant/multi-tenant-service.js. The multi-project mode is provided for development and test purposes only.
 
-In the multi-project setup, instead of reading the project ID from bootstrap.js, the project-id is the first path segment in the URL. For example, to run the store against project "myproject" you would use the URL: 
+In the multi-project setup, instead of reading the project ID from bootstrap.js, the project-id is the first path segment in the URL. For example, to run the store against project "myproject" you would use the URL:
 
     http://localhost:9000/myproject
 
@@ -277,21 +275,9 @@ between modules.
 - [ngInfiniteScroll](http://binarymuse.github.io/ngInfiniteScroll/) Infinite scrolling in AngularJS. Used for the "browse product" pages.
 
 ### About Contributions
- 
-We encourage contributions in the form of pull requests against the master branch of this repository.  Your pull request will be reviewed by a member of the hybris organization. 
+
+We encourage contributions in the form of pull requests against the master branch of this repository.  Your pull request will be reviewed by a member of the hybris organization.
 
 ### License
- 
+
 See the License.md file for complete license information.
-
-
-
-
-
-
-
-
-
-
-
-
