@@ -29,7 +29,7 @@
 	} else if (document.URL.match(/\?nobackend$/)) {
 
 	    // if the query string is present add a module with a run definition to replace the back end.
-		angular.module('ds.backendMock', ['ngMockE2E', 'ngResource'])
+		angular.module('ds.backendMock', ['ngMockE2E'])
 
 			.run(function($httpBackend, $resource) {
 
