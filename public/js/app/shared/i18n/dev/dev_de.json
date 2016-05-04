@@ -348,6 +348,8 @@
     //XMSG
     "ERROR_ADDING_TO_CART": "Hinzufügen zum Warenkorb war nicht erfolgreich.  Versuchen Sie es noch einmal.",
 
+    "INVENTORY": " left in stock",
+
     //XFLD
     //-------------------------------------------------
     // Product List Page

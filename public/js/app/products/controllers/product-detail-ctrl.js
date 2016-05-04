@@ -33,6 +33,10 @@ angular.module('ds.products')
 
             InventorySvc.getStock(product.product.sku).then(function (stock) {
                 $scope.inventory = stock;
+                $scope.inStock = (stock.available > 0);
+            }, function () {
+                console.error('No stock available for product sku:', product.product.sku);
+                $scope.inStock = false;
             });
 
             if(!!lastCatId) {

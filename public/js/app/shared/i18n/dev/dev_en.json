@@ -348,6 +348,8 @@
     //XMSG
     "ERROR_ADDING_TO_CART": "Add to Cart was not successful.  Please try again.",
 
+    "INVENTORY": " left in stock",
+
     //XFLD
     //-------------------------------------------------
     // Product List Page
