@@ -31,7 +31,7 @@
 	    // if the query string is present add a module with a run definition to replace the back end.
 		angular.module('ds.backendMock', ['ngMockE2E'])
 
-			.run(function($httpBackend, $resource) {
+			.run(function($httpBackend) {
 
 				console.info('Running in backend mode');
 
