@@ -5,7 +5,7 @@ angular.module('ds.inventory')
         function(InventoryREST){
             return {
                 getStock: function (sku) {
-                    return InventoryREST.Inventory.one('sources', 'retail_001').one('stocks', sku).get();
+                    return InventoryREST.Inventory.one('sources', 'retail_002').one('stocks', sku).get();
                 }
             };
         }]);
